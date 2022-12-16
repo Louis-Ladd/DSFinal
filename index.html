@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Instagram Study</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=5.0">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+  <link rel="stylesheet" href="css\style.css">
+  <link rel="icon" type="image/x-icon" href="/media/favicon-16x16.png">
+</head>
+<body>
+    <div id="fadein">
+        <div class = "fadeinpage">
+            <p>Welcome</p>
+        </div>
+    </div>
+    <style>
+        /* For best practice, move CSS below to an external CSS file. */
+        @keyframes fadeinall {
+        0% {
+        opacity: 1; }
+        97% {
+        opacity: 0; }
+        98% {
+        opacity: 0;
+        -webkit-transform: translateY(0);
+        transform: translateY(0); }
+        99% {
+        opacity: 0;
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%); }
+        100% {
+        opacity: 0;
+        z-index: -1; } }
+        #fadein {
+        opacity: 1;
+        position: fixed;
+        margin: -5%;
+        width: 106%;
+        height: 1010%;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+        background-color: rgb(0, 0, 0);
+        z-index: 999;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+        -webkit-animation: fadeinall 1s normal both;
+        animation: fadeinall 1s normal both;
+        -webkit-animation-delay: 0.3s;
+        animation-delay: 0.4s; }
+    </style>
+    <div class="page">
+        <h1>How does the price of indie games affect ratings</h1>
+        <hr>
+        <h2>Metrics</h2>
+        <br>
+        <p>We're looking at two metrics; price of a game and the percentage of postitive feedback.</p><br>
+        <p>I used this <a href="https://www.kaggle.com/datasets/trolukovich/steam-games-complete-dataset" target="_blank" rel="noopener noreferrer">dataset</a>
+            from kaggle which contains 40,000 games from steam.
+        </p>
+        <br>
+        <hr>
+        <h2>Results</h2>
+        <br>
+        <p>Here's the price to rating graph for the indie games in the <a href="https://www.kaggle.com/datasets/trolukovich/steam-games-complete-dataset" target="_blank" rel="noopener noreferrer">dataset</a>.</p>
+        <a href="100x100Graph.png">
+        <img src="100x100Graph.png" width = 45% class="center"></a>
+        <br>
+        <p>As we can see in this graph above, there is a lot of cheap crappy games on steam.
+            <br>
+            Though this doesn't mean that a cheap indie game is destined to be bad.
+            <br>
+            We can see there's more highly rated cheap indie games than highly rated expensive games.
+            <br>
+            The price of a indie game lowers the barrier to entry. Though the higher the price, the more expectation there is for the game.
+            <br>
+            This explains the more solid line in the top left quadrant of the graph compared to the top right quadrant.
+        </p>
+        <a href="100x51Graph.png">
+        <img src="100x51Graph.png" width = 45% class="center"></a>
+        <br>
+        <p>As we zoom in to the cheaper games, we can see the pleathra of cheap crappy games.
+            <br>
+            But we also see a minor gap around 80% then a big block of highly rated cheap games.
+        </p>
+        <br>
+        <hr>
+        <h1>Conclusion</h1>
+        <br>
+        <p>In conclusion, Price doesn't directly affect ratings.
+            <br>
+            Though a lower price is a lower barrier to entry.
+            <br>
+            This explains the large amount of crappy games with a low to high percentage of good reviews.
+            <br>
+            It could also be concluded that a higher price will bring more bad ratings if the indie game sucks.
+            <br>
+            People value money and if they give you a lot for a bad experience, they will air that out in the form of reviews.
+            <br>
+            This explains the percentage gap that more expensive games show in the graph.
+        </p>
+
+    </div>
+    <script type="text/javascript">
+        window.onload = function(){
+            setTimeout(function(){
+            document.getElementById("fadein").remove();
+            },1000);
+        };
+    </script>
+    
+</body>
+</html>
